@@ -29,3 +29,16 @@ public class Client {
         return "Client [dni=" + dni + ", name=" + name + ", surname=" + surname + ", manager=" + manager + "]";
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

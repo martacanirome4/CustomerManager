@@ -14,16 +14,29 @@ public class Agenda {
         this.clients = new ArrayList<Client>();
     }
 
-    public Client filtrarGestor(String manager) {}
 
-    public Client filtrarDNI(String dni) {}
+    // metodos
+    public Agenda filterManager(String manager) {
+        return new Agenda(clients.stream().filter(x->x.getManager()).equals(manager)).collect(Collectors.toArrayList::new));
+    }
 
-    public añadirCliente(client) {}
+    public Client filterByDNI(String dni){
+       return  clients.stream().
+               filter(client -> client.getDNI() == dni).
+               getFirst().
+               orElse(null);
+    }
 
-    public modificarCliente(String dni) {}
+    public addCLient(client) {
+        clients.add(client);
+    }
 
-    public Client listarClientes() {}
+    public modifyClient(String dni) {
 
-    public Client listarCliente() {}
+    }
+
+    public listClients() {}
+
+    public listClientsInOrder() {}
 
 }
