@@ -18,6 +18,7 @@ public class Agenda {
     // metodos
     public Agenda filterManager(String manager) {
         return new Agenda(clients.stream().filter(x->x.getManager()).equals(manager)).collect(Collectors.toArrayList::new));
+        // toArrayList::new = (x -> new Collector.toArrayList(x))
     }
 
     public Client filterByDNI(String dni){
